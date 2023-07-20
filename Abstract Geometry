@@ -1,0 +1,57 @@
+package functions;
+import java.util.*;
+abstract class shape{
+int side;
+abstract void NumberOfSides();
+}
+class Rectangle extends shape{
+Rectangle(int a) {
+side=a;}
+void NumberOfSides() {
+System.out.println("I AM RECTANGLE ,I HAVE "+side+" SIDES AND MY ANGLE IS:"+(side-2)*180);
+}
+}  
+    //int n=4;
+    //int angle=((n-2)*180);
+    //System.out.println(angle);
+
+
+class Triangle extends shape
+{
+Triangle(int a)
+{
+side=a;
+}
+void NumberOfSides()
+{
+System.out.println("I AM TRIANGLE ,I HAVE" +side+ "SIDES AND MY ANGLE IS:"+(side-2)*180);
+
+}
+}
+   
+
+class Hexagon extends shape{
+Hexagon(int a) {
+side=a;
+}
+void NumberOfSides() {
+System.out.println("I AM HEXAGON ,I HAVE "+side+" SIDES AND MY ANGLE IS:"+(side-2)*180);
+}
+ 
+   
+}
+//public class ggeometryShapes {
+public class AbstractGeometry {
+
+public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+Rectangle r=new Rectangle(4);
+Triangle t=new Triangle(3);
+Hexagon h=new Hexagon(6);
+r.NumberOfSides();
+t.NumberOfSides();
+h.NumberOfSides();
+sc.close();
+}
+
+}
